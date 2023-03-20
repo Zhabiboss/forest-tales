@@ -5,12 +5,12 @@ class PlayerHealthOverlay:
     def __init__(self, app):
         self.app = app
         self.playerHealth = self.app.player.health
-        self.font = pygame.font.SysFont("Consolas", 16, bold = True)
+        self.font = pygame.font.SysFont("Resources/Consolas.ttf", 16, bold = True)
         self.text = self.font.render(f"Health: {self.playerHealth}", True, "green")
 
     def update(self):
         self.playerHealth = self.app.player.health
-        self.font = pygame.font.SysFont("Consolas", 16, bold = True)
+        self.font = pygame.font.Font("Resources/Consolas.ttf", 16, bold = True)
         self.text = self.font.render(f"Health: {self.playerHealth}", True, "green")
 
     def draw(self):
